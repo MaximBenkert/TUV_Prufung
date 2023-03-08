@@ -110,5 +110,15 @@ class CarInspectionServiceTest {
         boolean expected = true;
         assertEquals(expected, actual);
     }
+    @Test
+    void returnFalseWhenAnyOfTheChecksDidNotPass() {
+        //GIVEN
+        Car myCar = new Car (8,3,true,true);
+        //WHEN
+        boolean actual = CarInspectionService.checkCar(myCar);
+        //THEN
+        boolean expected = false;
+        assertEquals(expected, actual);
+    }
 
 }

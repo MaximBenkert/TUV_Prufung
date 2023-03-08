@@ -18,4 +18,10 @@ public class CarInspectionService {
     public static boolean checkCar(Car myCar) {
         return doesCarHaveFourTires(myCar) && doesCarHaveSeatbelt(myCar) && doesCarHaveAirbag(myCar) && doesCarHaveThreeOrFiveDoors(myCar);
     }
+
+    public static void whatsUpWithMyCar (Car myCar){
+        if (checkCar(myCar))
+            System.out.println("your car works fine!");
+        else System.out.println("your car is a mess!!");
+    }
 }
